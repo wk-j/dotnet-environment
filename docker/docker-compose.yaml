@@ -1,0 +1,16 @@
+version: "3.1"
+
+services:
+  app:
+    image: wk-j/app:latest
+
+  nginx:
+    image: nginx:1.15
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+
+    environment:
+      - ASPNETCORE_FORWARDEDHEADERS_ENABLED=true
+      - ASPNETCORE_ENVIRONMENT=Production

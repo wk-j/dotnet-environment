@@ -1,0 +1,1 @@
+docker build -f docker/Dockerfile -t wk-j/app:latest .
