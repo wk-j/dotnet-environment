@@ -13,6 +13,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
 namespace MyWeb {
+    public class AppSettings {
+        public string AppName { set; get; }
+        public string ConnectionString { set; get; }
+    }
+
     public class Startup {
         public Startup(IWebHostEnvironment env) {
             var builder = new ConfigurationBuilder()
@@ -33,9 +38,7 @@ namespace MyWeb {
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger) {
-            logger.LogInformation("Env = {0}", env.EnvironmentName);
-            logger.LogInformation("MyName = {0}", Configuration.GetValue("MyName", "-"));
-            logger.LogInformation("YourName = {0}", Configuration.GetValue("YourName", "-"));
+            // var settings = Configuration.Bind
 
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
