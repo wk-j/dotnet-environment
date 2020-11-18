@@ -12,11 +12,8 @@ open http://localhost/app/weatherForecast
 ## Run
 
 ```bash
-set ConnectionString 'Host=xyz'
 set ASPNETCORE_ENVIRONMENT Production
 dotnet src/MyWeb/bin/Debug/net5.0/MyWeb.dll
-
-dotnet run --project src/MyWeb
 ```
 
 ## App
