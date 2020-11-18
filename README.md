@@ -19,6 +19,7 @@ dotnet src/MyWeb/bin/Debug/net5.0/MyWeb.dll
 ## App
 
 ```bash
-set ConnectionString 'Host=xyz'
+export ConnectionString='Host=xyz;'
+export Alfresco__User='admin;'
 dotnet run --project src/MyApp
 ```

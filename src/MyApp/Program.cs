@@ -21,6 +21,7 @@ namespace MyApp {
 
             var settings = config.Get<AppSettings>();
             var cs = settings.ConnectionString;
+
             Console.WriteLine("ConnectionString = {0}", cs);
             Console.WriteLine("Alfresco.User = {0}", settings.Alfresco.User);
         }
