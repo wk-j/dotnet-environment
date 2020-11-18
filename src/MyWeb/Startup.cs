@@ -22,9 +22,9 @@ namespace MyWeb {
         public Startup(IWebHostEnvironment env) {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddEnvironmentVariables()
                 .AddJsonFile("__app__/appsettings.json")
-                .AddJsonFile($"__app__/appsettings.{env.EnvironmentName}.json");
+                .AddJsonFile($"__app__/appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
 

@@ -1,5 +1,7 @@
 ## Environment
 
+- [x] Multiple environment
+- [x] Pass environment variables
 
 ```bash
 sh build-docker.sh
@@ -10,5 +12,16 @@ open http://localhost/app/weatherForecast
 ## Run
 
 ```bash
-ASPNETCORE_ENVIRONMENT=Production dotnet src/MyWeb/bin/Debug/net5.0/MyWeb.dll
+set ConnectionString 'Host=xyz'
+set ASPNETCORE_ENVIRONMENT Production
+dotnet src/MyWeb/bin/Debug/net5.0/MyWeb.dll
+
+dotnet run --project src/MyWeb
+```
+
+## App
+
+```bash
+set ConnectionString 'Host=xyz'
+dotnet run --project src/MyApp
 ```
