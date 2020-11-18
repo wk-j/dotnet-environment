@@ -5,6 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 namespace MyApp {
     class AppSettings {
         public string ConnectionString { set; get; }
+        public Alfresco Alfresco { set; get; }
+    }
+
+    public class Alfresco {
+        public string User { set; get; }
     }
 
     class Program {
@@ -16,7 +21,8 @@ namespace MyApp {
 
             var settings = config.Get<AppSettings>();
             var cs = settings.ConnectionString;
-            Console.WriteLine(cs);
+            Console.WriteLine("ConnectionString = {0}", cs);
+            Console.WriteLine("Alfresco.User = {0}", settings.Alfresco.User);
         }
     }
 }
