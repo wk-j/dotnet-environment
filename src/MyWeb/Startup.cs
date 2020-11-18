@@ -47,8 +47,8 @@ namespace MyWeb {
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyWeb v1"));
             }
 
-            logger.LogInformation(" AppName = {0}", settings.AppName);
-            logger.LogInformation(" ConnectionString = {0}", settings.ConnectionString);
+            logger.LogInformation(" __AppName = {0}", settings.AppName);
+            logger.LogInformation(" __ConnectionString = {0}", settings.ConnectionString);
 
             app.UseHttpsRedirection();
             app.UseRouting();

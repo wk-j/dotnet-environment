@@ -1,3 +1,2 @@
-
-ConnectionString='Host=xyz'
+export ConnectionString='Host=xyz'
 dotnet run --project src/MyApp
